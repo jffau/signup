@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import FormUserDetails from './FormUserDetails';
 export default class UserForm extends Component {
   state = {
     step: 1,
@@ -62,7 +62,5 @@ export default class UserForm extends Component {
           />
         );
     }
-
-    return <div className="" />;
   }
 }
