@@ -14,37 +14,35 @@ export class FormUserDetails extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <>
-          <AppBar title="Enter User Details" />
+        <AppBar title="Enter User Details" />
 
-          <TextField
-            hintText="Enter Your First Name"
-            floatingLabelText="First Name"
-            onChange={handleChange('firstName')}
-            defaultValue={values.firstName}
-          />
+        <TextField
+          hintText="Enter Your First Name"
+          floatingLabelText="First Name"
+          onChange={handleChange('firstName')}
+          defaultValue={values.firstName}
+        />
 
-          <TextField
-            hintText="Enter Your Last Name"
-            floatingLabelText="Last Name"
-            onChange={handleChange('lastName')}
-            defaultValue={values.lastName}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your email"
-            floatingLabelText="email"
-            onChange={handleChange('email')}
-            defaultValue={values.email}
-          />
-          <br />
-          <RaisedButton
-            label="Continue"
-            primary={true}
-            style={styles.button}
-            onClick={this.continue}
-          />
-        </>
+        <TextField
+          hintText="Enter Your Last Name"
+          floatingLabelText="Last Name"
+          onChange={handleChange('lastName')}
+          defaultValue={values.lastName}
+        />
+        <br />
+        <TextField
+          hintText="Enter Your email"
+          floatingLabelText="email"
+          onChange={handleChange('email')}
+          defaultValue={values.email}
+        />
+        <br />
+        <RaisedButton
+          label="Continue"
+          primary={true}
+          style={styles.button}
+          onClick={this.continue}
+        />
       </MuiThemeProvider>
     );
   }
