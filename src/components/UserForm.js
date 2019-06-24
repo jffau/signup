@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
-export default class UserForm extends Component {
+export class UserForm extends Component {
   state = {
     step: 1,
 
@@ -14,15 +14,15 @@ export default class UserForm extends Component {
   };
 
   nextStep = () => {
-    const { step } = this.state.step;
-    step.setState({
+    const { step } = this.state;
+    this.setState({
       step: step + 1
     });
   };
 
   prevStep = () => {
-    const { step } = this.state.step;
-    step.setState({
+    const { step } = this.state;
+    this.setState({
       step: step - 1
     });
   };
