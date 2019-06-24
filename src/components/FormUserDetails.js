@@ -16,6 +16,7 @@ export class FormUserDetails extends Component {
       <MuiThemeProvider>
         <>
           <AppBar title="Enter User Details" />
+
           <TextField
             hintText="Enter Your First Name"
             floatingLabelText="First Name"
@@ -39,7 +40,7 @@ export class FormUserDetails extends Component {
           <br />
           <RaisedButton
             label="Continue"
-            primary="true"
+            primary={true}
             style={styles.button}
             onClick={this.continue}
           />
