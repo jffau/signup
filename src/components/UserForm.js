@@ -30,6 +30,18 @@ export class UserForm extends Component {
     });
   };
 
+  reset = () => {
+    this.setState({
+      step: 1,
+      firstName: '',
+      lastName: '',
+      email: '',
+      occupation: '',
+      city: '',
+      bio: ''
+    });
+  };
+
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
   };
@@ -67,7 +79,7 @@ export class UserForm extends Component {
         );
 
       case 4:
-        return <Success />;
+        return <Success reset={this.reset} />;
 
       default:
         return (
